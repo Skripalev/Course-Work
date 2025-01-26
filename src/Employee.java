@@ -51,65 +51,6 @@ public class Employee {
     }
 
 
-    public static void printAllEmployees(Employee[] employees) {
-        for (Employee employee : employees) {
-            System.out.println(employee);
-        }
-    }
-
-    public static double getSalarySum(Employee[] employees) {
-        double sum = 0;
-        for (Employee employee : employees) {
-            if (employee != null) {
-                sum += employee.getSalary();
-            }
-        }
-        return sum;
-    }
-
-    public static Employee getMinSalarySum(Employee[] employees) {
-        Employee minSalaryEmployee = employees[0];
-        for (int i = 0; i < employees.length; i++) {
-            Employee employee = employees[i];
-            if (employee.getSalary() < minSalaryEmployee.getSalary()) {
-                minSalaryEmployee = employee;
-            }
-        }
-        return minSalaryEmployee;
-    }
-
-    public static Employee getMaxSalarySum(Employee[] employees) {
-        Employee maxSalaryEmployee = employees[0];
-        for (int i = 0; i < employees.length; i++) {
-            Employee employee = employees[i];
-            if (employee.getSalary() > maxSalaryEmployee.getSalary()) {
-                maxSalaryEmployee = employee;
-            }
-        }
-        return maxSalaryEmployee;
-    }
-
-    public static double getMidlSalary(Employee[] employees) {
-        double midlSum = 0;
-        double sum = 0;
-        for (Employee employee : employees) {
-            if (employee != null) {
-                sum += employee.getSalary();
-
-            }
-        }
-        midlSum = sum / employees.length;
-        return midlSum;
-    }
-
-    public static void printAllEmployeeNames() {
-        for (Employee employee : Main.employees) {
-            if (employee != null) {
-                System.out.println( employee.lastName + " " + employee.firstName + " " + employee.Surname);
-            }
-        }
-    }
-
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
